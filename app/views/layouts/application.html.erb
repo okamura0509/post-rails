@@ -10,6 +10,11 @@
   </head>
 
   <body>
+  <div class="container">
+    <%= form_with url: search_path, method: :get, local: true do |f| %>
+      <%= f.text_field :postal_code, class: "search_form" %>
+    <% end %>
+  </div>
     <%= yield %>
   </body>
 </html>
